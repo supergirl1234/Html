@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js自定义对象</title>
+		
+		<!--格式：定义对象和函数格式一样
+		 function 对象（属性）{有参方式
+		 	追加属性
+		 	追加方法	
+		 }
+		 创建对象
+		 var 对象名=new 对象（实际参数）;
+		 方式1：有参构造方式-->
+		
+		<script>
+			
+			function Person(name,age){
+				
+			   /*追加属性*/
+			   this.name=name;
+			   this.age=age;
+		 	   /*追加方法*/
+			 	this.speak=function(){
+			 		alert("调用了说话的功能....");
+			 	}
+			}
+			
+			var p=new Person("张三",14);
+			//调用属性
+			document.write("名字："+p.name+",年龄："+p.age+"<br/>");
+			//调用方法
+			p.speak();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
